@@ -35,7 +35,8 @@
   },
   "resolutions": {
     "**/webpack": "4",
-    "@types/node": "^16"
+    "@types/node": "^16",
+    "@achrinza/node-ipc": "^10.1.0"
   },
   "scripts": {
     "dev": "NODE_ENV=dev ./node_modules/.bin/vue-cli-service serve",
