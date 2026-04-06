@@ -16,7 +16,7 @@ defaults:
 
 jobs:
   build-extension-catalog:
-    uses: rancher/dashboard/.github/workflows/build-extension-catalog.yml@master
+    uses: rancher/dashboard/.github/workflows/build-extension-catalog.yml@3cf7d4058278baf895d9f7f26b6bfbc51f17e7fa # 2.14.0
     permissions:
       actions: write
       contents: read
@@ -24,5 +24,6 @@ jobs:
     with:
       registry_target: ghcr.io
       registry_user: ${{ github.actor }}
+      tagged_release: ${{ github.ref_name }}
     secrets: 
       registry_token: ${{ secrets.GITHUB_TOKEN }}

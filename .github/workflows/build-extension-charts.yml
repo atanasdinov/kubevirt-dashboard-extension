@@ -16,7 +16,7 @@ defaults:
 
 jobs:
   build-extension-charts:
-    uses: rancher/dashboard/.github/workflows/build-extension-charts.yml@master
+    uses: rancher/dashboard/.github/workflows/build-extension-charts.yml@3cf7d4058278baf895d9f7f26b6bfbc51f17e7fa # v2.14.0
     permissions:
       actions: write
       contents: write
@@ -24,3 +24,4 @@ jobs:
       pages: write
     with:
       target_branch: gh-pages
+      tagged_release: ${{ github.ref_name }}
